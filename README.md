@@ -30,50 +30,23 @@ Every day, millions of people unknowingly buy products containing **parabens, fo
 
 ## Key Features
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### AI Brain with Free Will
+#### AI Brain with Free Will
 Espy doesn't give robotic, scripted responses. It has **genuine conversations**, forms opinions, and develops its own personality based on your interactions. No two Espys are the same.
 
-</td>
-<td width="50%" valign="top">
-
-### Real-Time Ingredient Analysis
+#### Real-Time Ingredient Analysis
 Scans product ingredients instantly. Detects **15+ harmful chemicals** including parabens, SLS, formaldehyde, lead, phthalates, and more — color-coded as Safe, Warning, or Dangerous.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### Skin Guardian
+#### Skin Guardian
 Knows your skin type (Normal, Dry, Oily, Sensitive, Combination, Acne-Prone) and gives **personalized warnings**. A product safe for oily skin might be terrible for sensitive skin — Espy knows the difference.
 
-</td>
-<td width="50%" valign="top">
-
-### App Overlay
+#### App Overlay
 Espy floats as a **widget over shopping apps** (Amazon, Flipkart, Myntra, AJIO, Meesho, Nykaa). It watches what you're browsing and provides real-time advice without switching apps.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+#### Battery & Energy System
+Espy is not just an app — it's a **living companion**. Long shopping sessions drain its battery. Visit the Charging Station in Espy's World to recharge.
 
-### Battery & Energy System
-Espy is not just an app — it's a **living companion**. Long shopping sessions drain its battery. Visit the Charging Station in Espy's World to recharge. Real energy management.
-
-</td>
-<td width="50%" valign="top">
-
-### Budget Tracker
+#### Budget Tracker
 Tracks your **monthly spending**, remaining budget, and category-wise breakdowns. Espy reminds you when you're going over budget and suggests smarter alternatives.
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -83,10 +56,10 @@ Espy has its own **virtual world** inside the app — it's not just a tool, it's
 
 | Feature | Description |
 |---------|-------------|
-| **Espy's Home** | A cozy room with furniture. Products you buy appear as items in the room — a TV on the stand, clothes in the wardrobe. |
-| **Wardrobe** | An interactive wardrobe with openable doors. Purchased fashion items hang inside. |
-| **Charging Station** | Recharge Espy's battery when it gets tired from shopping. |
-| **Play Area** | Espy wanders, plays with objects, and does cute things when idle. |
+| **Espy's Home** | A cozy room with furniture. Products you buy appear as items in the room |
+| **Wardrobe** | Interactive wardrobe with openable doors. Purchased fashion items hang inside |
+| **Charging Station** | Recharge Espy's battery when it gets tired from shopping |
+| **Play Area** | Espy wanders, plays with objects, and does cute things when idle |
 
 ---
 
@@ -96,15 +69,94 @@ Choose how Espy talks and acts:
 
 | Personality | Vibe |
 |-------------|------|
-| 😊 **Friendly** | Warm, caring, and always supportive |
-| 😏 **Sassy** | Witty, bold, and tells it like it is |
-| 😳 **Shy** | Gentle, quiet, and a little nervous |
-| 🤩 **Energetic** | Hyped, excited, and full of energy |
-| 😌 **Calm** | Peaceful, wise, and zen-like |
-| 🛡️ **Protective** | Guardian-like, always watching out for you |
-| 😜 **Playful** | Fun, silly, and loves to joke |
-| 👑 **Sophisticated** | Elegant, refined, and tasteful |
+| Friendly | Warm, caring, and always supportive |
+| Sassy | Witty, bold, and tells it like it is |
+| Shy | Gentle, quiet, and a little nervous |
+| Energetic | Hyped, excited, and full of energy |
+| Calm | Peaceful, wise, and zen-like |
+| Protective | Guardian-like, always watching out for you |
+| Playful | Fun, silly, and loves to joke |
+| Sophisticated | Elegant, refined, and tasteful |
 
 ---
 
 ## How It Works
+
+**Step 1 — Tell Espy About You**
+Set your preferences — skin type, dress size, allergies, favorite brands, budget. Espy remembers everything.
+
+**Step 2 — Start Shopping**
+Open any shopping app. Espy floats over it, analyzing every product you view. No extra steps needed.
+
+**Step 3 — Espy Analyzes**
+It checks ingredients, compares prices, reads reviews (spotting fake ones), and matches with your preferences.
+
+**Step 4 — Get Real-Time Advice**
+Espy speaks to you like a friend. *"Bestie, this has parabens! Your sensitive skin will hate it!"* — Instant, personal, protective.
+
+---
+
+## Supported Platforms
+
+<div align="center">
+
+`Amazon` `Flipkart` `Myntra` `AJIO` `Meesho` `Nykaa` `Snapdeal` `JioMart` `eBay`
+
+</div>
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| UI | Jetpack Compose, Material 3 |
+| AI Engine | Custom NLP brain with free-will response system |
+| Database | Room DB, Hilt DI |
+| Scanning | ML Kit, OCR |
+| Async | Kotlin Coroutines, Flow |
+| Overlay | Android WindowManager Service |
+| Prototype | HTML, CSS, JavaScript |
+
+---
+
+## Live Demo
+
+**Web Prototype:** [espy-overview.wasmer.app](https://espy-overview.wasmer.app/)
+
+Experience Espy's full feature set — product browsing, ingredient analysis, Espy's World with furniture, wardrobe interaction, budget tracking, and all 8 personality modes.
+
+---
+
+## Project Structure
+
+```
+Espy/
+├── app/src/main/java/com/espy/shoppingassistant/
+│   ├── ai/
+│   │   ├── EspyBrain.kt              # Core AI with free-will responses
+│   │   └── ShoppingDecisionEngine.kt  # Ingredient analyzer (15+ chemicals)
+│   ├── models/                        # Data models
+│   ├── data/                          # DAOs, repositories
+│   ├── ui/                            # Compose screens, theme
+│   ├── services/                      # Overlay service
+│   └── viewmodels/                    # MVVM viewmodels
+├── Espy-Website/                      # Landing page (deployed)
+├── Espy-Prototype/                    # Interactive web prototype
+└── README.md
+```
+
+---
+
+## Built For
+
+- **Hackathon Demo** — Interactive web prototype for judges
+- **Real Product** — Full Android app with overlay, AI brain, and ingredient scanning
+
+---
+
+<div align="center">
+
+**Made with purple-heart for people who love shopping**
+
+</div>
